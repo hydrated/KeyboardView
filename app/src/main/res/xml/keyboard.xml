@@ -37,98 +37,98 @@
     </Row>
     <Row>
         <Key
-            app:codes="81"
+            app:codes="113"
             app:keyEdgeFlags="left"
-            app:keyLabel="Q" />
+            app:keyLabel="q" />
         <Key
-            app:codes="87"
-            app:keyLabel="W" />
+            app:codes="119"
+            app:keyLabel="w" />
         <Key
-            app:codes="69"
-            app:keyLabel="E" />
+            app:codes="101"
+            app:keyLabel="e" />
         <Key
-            app:codes="82"
-            app:keyLabel="R" />
+            app:codes="114"
+            app:keyLabel="r" />
         <Key
-            app:codes="84"
-            app:keyLabel="T" />
+            app:codes="116"
+            app:keyLabel="t" />
         <Key
-            app:codes="89"
-            app:keyLabel="Y" />
+            app:codes="121"
+            app:keyLabel="y" />
         <Key
-            app:codes="85"
-            app:keyLabel="U" />
+            app:codes="117"
+            app:keyLabel="u" />
         <Key
-            app:codes="73"
-            app:keyLabel="I" />
+            app:codes="105"
+            app:keyLabel="i" />
         <Key
-            app:codes="79"
-            app:keyLabel="O" />
+            app:codes="111"
+            app:keyLabel="o" />
         <Key
-            app:codes="80"
-            app:keyLabel="P" />
+            app:codes="112"
+            app:keyLabel="p" />
     </Row>
     <Row>
         <Key
-            app:codes="65"
+            app:codes="97"
             app:keyEdgeFlags="left"
-            app:keyLabel="A" />
+            app:keyLabel="a" />
         <Key
-            app:codes="83"
-            app:keyLabel="S" />
+            app:codes="115"
+            app:keyLabel="s" />
         <Key
-            app:codes="68"
-            app:keyLabel="D" />
+            app:codes="100"
+            app:keyLabel="d" />
         <Key
-            app:codes="70"
-            app:keyLabel="F" />
+            app:codes="102"
+            app:keyLabel="f" />
         <Key
-            app:codes="71"
-            app:keyLabel="G" />
+            app:codes="103"
+            app:keyLabel="g" />
         <Key
-            app:codes="72"
-            app:keyLabel="H" />
+            app:codes="104"
+            app:keyLabel="h" />
         <Key
-            app:codes="74"
-            app:keyLabel="J" />
+            app:codes="106"
+            app:keyLabel="j" />
         <Key
-            app:codes="75"
-            app:keyLabel="K" />
+            app:codes="107"
+            app:keyLabel="k" />
         <Key
-            app:codes="76"
-            app:keyLabel="L" />
+            app:codes="108"
+            app:keyLabel="l" />
         <Key
             app:codes="-5"
             app:keyLabel="Back" />
     </Row>
     <Row>
         <Key
-            app:codes="44"
-            app:keyLabel="," />
+            app:codes="-7"
+            app:keyIcon="@android:drawable/ic_menu_manage" />
         <Key
             app:codes="45"
             app:keyLabel="-" />
         <Key
-            app:codes="90"
-            app:keyLabel="Z" />
+            app:codes="122"
+            app:keyLabel="z" />
         <Key
-            app:codes="88"
-            app:keyLabel="X" />
+            app:codes="120"
+            app:keyLabel="x" />
         <Key
-            app:codes="67"
-            app:keyLabel="C" />
+            app:codes="99"
+            app:keyLabel="c" />
         <Key
-            app:codes="86"
-            app:keyLabel="V" />
+            app:codes="118"
+            app:keyLabel="v" />
         <Key
-            app:codes="66"
-            app:keyLabel="B" />
+            app:codes="98"
+            app:keyLabel="b" />
         <Key
-            app:codes="78"
-            app:keyLabel="N" />
+            app:codes="110"
+            app:keyLabel="n" />
         <Key
-            app:codes="77"
-            app:keyLabel="M" />
+            app:codes="109"
+            app:keyLabel="m" />
         <Key
             app:codes="-3"
             app:keyLabel="Fin" />

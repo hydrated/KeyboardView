@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'com.github.dcendents.android-maven'
+//    id 'com.github.dcendents.android-maven'
 }
 
 ext {
@@ -11,7 +11,7 @@ ext {
     PUBLISH_ARTIFACT_ID = 'keyboardview'
 }
 
-apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+//apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 android {
     compileSdkVersion 30

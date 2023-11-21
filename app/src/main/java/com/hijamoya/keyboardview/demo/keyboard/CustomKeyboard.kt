@@ -14,11 +14,14 @@ import com.hijamoya.keyboardview.KeyboardView
 class CustomKeyboard : Keyboard, KeyboardView.OnKeyboardActionListener {
     private val CODE_DELETE = -5
     private val CODE_CANCEL = -3
+    private val CODE_CAPITAL = -7
 
     private var keyboardView: KeyboardView? = null
     private var activity: Activity? = null
     private var hostDialog: Dialog? = null
     private var targetEditText: EditText? = null
+
+    private var isCapital = false
 
     constructor(host: Activity?, layout: Int) : super(host, layout) {
         activity = host
@@ -118,6 +121,27 @@ class CustomKeyboard : Keyboard, KeyboardView.OnKeyboardActionListener {
         edittext.setOnTouchListener(null)
     }
 
+    private fun shiftEnglish() {
+        val keyList: MutableList<Key> = this.keys
+        for (key in keyList) {
+            if (key.label != null && isKey(key.label.toString())) {
+                if (isCapital) {
+                    key.label = key.label.toString().toLowerCase()
+                    key.codes[0] = key.codes[0] + 32
+                } else {
+                    key.label = key.label.toString().toUpperCase()
+                    key.codes[0] = key.codes[0] - 32
+                }
+            }
+        }
+        isCapital = !isCapital
+    }
+
+    private fun isKey(key: String): Boolean {
+        val lowercase = "abcdefghijklmnopqrstuvwxyz"
+        return lowercase.indexOf(key.toLowerCase()) > -1
+    }
+
     override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
         val editText: EditText?
         val focusCurrent = when {
@@ -135,15 +159,25 @@ class CustomKeyboard : Keyboard, KeyboardView.OnKeyboardActionListener {
         }
         val editable = editText.text
         val start = editText.selectionStart
-        if (primaryCode == CODE_DELETE) {
-            if (editable != null && start > 0) {
-                editable.delete(start - 1, start)
+
+        when (primaryCode) {
+            CODE_DELETE -> {
+                if (editable != null && start > 0) {
+                    editable.delete(start - 1, start)
+                }
             }
-        } else if (primaryCode == CODE_CANCEL) {
-            hideCustomKeyboard()
-        } else {
-            editable!!.insert(start, Character.toString(primaryCode.toChar()))
+            CODE_CANCEL -> {
+                hideCustomKeyboard()
+            }
+            CODE_CAPITAL -> {
+                shiftEnglish()
+                keyboardView?.keyboard = this
+            }
+            else -> {
+                editable!!.insert(start, Character.toString(primaryCode.toChar()))
+            }
         }
+
     }
 
     override fun onPress(arg0: Int) {
@@ -173,4 +207,5 @@ class CustomKeyboard : Keyboard, KeyboardView.OnKeyboardActionListener {
     override fun swipeUp() {
         // do nothing
     }
+
 }
